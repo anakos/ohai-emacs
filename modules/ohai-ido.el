@@ -31,10 +31,10 @@
       ido-use-virtual-buffers t)
 
 ;; Make sure ido is really everywhere.
-(use-package ido-ubiquitous
+(use-package ido-completing-read+
+  :ensure t
   :config
-  (ido-ubiquitous-mode))
-
+  (ido-ubiquitous-mode 1))
 
 ;; Use smex to provide ido-like interface for M-x
 (use-package smex
@@ -67,7 +67,7 @@ Symbols matching the text at point are put first in the completion list."
   (imenu--make-index-alist)
   (let ((name-and-pos '())
         (symbol-names '()))
-    (flet ((addsymbols (symbol-list)
+    (cl-flet ((addsymbols (symbol-list)
                        (when (listp symbol-list)
                          (dolist (symbol symbol-list)
                            (let ((name nil) (position nil))

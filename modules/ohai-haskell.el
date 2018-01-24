@@ -21,17 +21,14 @@
 ;;; Code:
 
 (use-package intero
+  :pin melpa
   :commands intero-mode)
 
 (use-package haskell-mode
   :commands haskell-mode
   :config
-  (add-hook 'haskell-mode-hook 'intero-mode))
-
-;; (use-package haskell-mode
-;;   :commands haskell-mode
-;;   :config
-;;   ;; Setup haskell-mode hooks
+    (add-hook 'haskell-mode-hook 'intero-mode)
+   ;; Setup haskell-mode hooks
 ;;   (custom-set-variables
 ;;    '(haskell-mode-hook
 ;;      '(turn-on-haskell-indentation
@@ -71,7 +68,8 @@
 ;;     (ohai/font-lock-replace-symbol 'haskell-mode "\\(=>\\)" "⇒")
 ;;     (define-key haskell-mode-map (kbd "→") (lambda () (interactive) (insert "->")))
 ;;     (define-key haskell-mode-map (kbd "←") (lambda () (interactive) (insert "<-")))
-;;     (define-key haskell-mode-map (kbd "⇒") (lambda () (interactive) (insert "=>")))))
+;;     (define-key haskell-mode-map (kbd "⇒") (lambda () (interactive) (insert "=>"))))
+   )
 
 
 ;; ;; A function for launching a compile buffer with `cabal test'.

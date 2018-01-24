@@ -151,9 +151,9 @@
 ;; Engage Nyan Cat!
 (use-package nyan-mode
   :config
-  (nyan-mode 1)
+  (nyan-mode 0)
   (setq nyan-bar-length 16
-        nyan-wavy-trail t))
+        nyan-wavy-trail 0))
 
 ;; Unclutter the modeline
 (use-package diminish)

@@ -25,9 +25,10 @@
 
 ;; Avy is a quick way to jump around your buffers.
 ;; https://github.com/abo-abo/avy
+;; ("C-;" . avy-goto-word-1)
 (use-package avy
   :demand t
-  :bind (("C-;" . avy-goto-word-1)
+  :bind ( ;; ("C-;" . avy-goto-word-1)
          ("C-:" . avy-goto-char))
   :config
   (with-eval-after-load "isearch"
